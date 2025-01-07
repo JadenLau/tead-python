@@ -2,7 +2,11 @@ from tqdm.rich import tqdm # progress bar
 import os
 
 conv1 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$%^&*()-=_+[{]}\\|;:\'",./<>?§\n\tÿþ÷¥€£…'
+conv1r = list(conv1)
+conv1r.reverse()
+
 conv = [
+        str(conv1r),
         '3þCSQNF8Ldg\'20)T^{z§R6kbZ%Y:#]}<1,+~\tWec@nX\nqBGPl_…r|DhvOo9Js;Hyt(A5.pi\\E`f>[M4-"w!? $mu&¥€£*7aKjIUV/ÿx=÷',
         '3lgþLP5AQnfJ/zRaH=§6Seq2E1,\tB8r({jid\n0kZo&:$-t*V|;vDU!9[Gb\'s}NO\\ph+^mcW_TF%Xu>Y"`#I~<C.y7?w 4M@x¥€£…)ÿ]K÷',
         '31?rJþR-/`o5g~VYL,X§xmsBjHW0;NZ!&9\\]n4\'kdt|%^O[liA.*}fTMG8c$>:KUev ywIS_pQb2+")({\n\tq@hzPuC#=¥€…£E76÷FDÿ<a',
@@ -28,6 +32,11 @@ conv = [
         '3^)0/z#O7\'UNK|w1JoH&I`PxC2\ncy5$@q9E%-Y?LeRm§tWþl}F!gh¥€£…Q[sX8G{(:M;6.÷4=_>A+vZÿ"SjT]u,naVfDip\tr\\<bB~dk* ',
         '3o4yh>UtVX+?}*(!7m#Iirq5D]J@L\\"Sj2Kfkb:/<z)M=§ B;þ.¥€£`{%RZ8n[lY\nF,waC÷~vAWHd…$1ÿe|O-_Esg9Pup0\tN\'GcT&^xQ6'
     ]
+
+print(conv[0])
+exit()
+
+
 def tmp_clear():
     print('\033[0mRemoving all encryption temp files...')
     os.system('sudo rm -fv /tmp/encryption*.tmp # & del /f %temp%\\encryption*.tmp')
