@@ -28,9 +28,10 @@ conv = [
         '3^)0/z#O7\'UNK|w1JoH&I`PxC2\ncy5$@q9E%-Y?LeRm§tWþl}F!gh¥€£…Q[sX8G{(:M;6.÷4=_>A+vZÿ"SjT]u,naVfDip\tr\\<bB~dk* ',
         '3o4yh>UtVX+?}*(!7m#Iirq5D]J@L\\"Sj2Kfkb:/<z)M=§ B;þ.¥€£`{%RZ8n[lY\nF,waC÷~vAWHd…$1ÿe|O-_Esg9Pup0\tN\'GcT&^xQ6'
     ]
-print('\033[0mRemoving all encryption temp files...')
-os.system('sudo rm -f /tmp/encryption*.tmp')
-print('Successful.\n')
+def tmp_clear():
+    print('\033[0mRemoving all encryption temp files...')
+    os.system('sudo rm -fv /tmp/encryption*.tmp # & del /f %temp%\\encryption*.tmp')
+    print('Successful.\n')
 print('\033[1mPlease check the hash below to keep your data safe.\033[0m\n\033[96m-------------------------------------------------------------------')
 orig_hash = [
     '2b2efae3c00465fa5cc39b3a856f7a43',
@@ -63,6 +64,7 @@ if ( not ( orig_hash[0] == edah or orig_hash[1] == edbh ) ) and ( not ( '-e' in 
         print('Exiting.'); exit(1)
     # raise SystemExit('The hash of Encryption Database does not match the factorys one.')
 if not ( '-e' in __import__('sys').argv or '-d' in __import__('sys').argv or '-r' in __import__('sys').argv ):
+    tmp_clear()
     i = input('e to encode, d to decode or r to run encoded program [e,d,r]: ')
 else: i = list(str(__import__('sys').argv[1]))[1]
 if i == 'e' or '-e' in __import__('sys').argv:
@@ -169,8 +171,8 @@ elif i == 'r' or '-r' in __import__('sys').argv:
         if para2 == 'none' or para2 == 'None': para2 = '' 
     print(f'program launch command: {lang} {para1} {o} {para2}')
     fo.close()
-    os.system(f'mv {o} /tmp/{o}')
-    os.system(f'{lang} {para1} /tmp/{o} {para2}')
+    os.system(f'mv {o} /tmp # & move {o} %temp%\\{o}')
+    os.system(f'{lang} {para1} /tmp/{o} {para2} # & start wt {lang} {para1} %temp%\\{o} {para2}')
     
 # Ctrl+K+U to remove note 
 # Ctrl+K+C to add note
