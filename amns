@@ -1,0 +1,2 @@
+#!/bin/bash
+python /workspaces/tead-python/encrypt.py $*
