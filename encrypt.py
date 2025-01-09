@@ -2,7 +2,7 @@ orig_hash = [
     'dd41ab0f74888ed22902452c552939b8',
     '556a41f9fa5aad9f43360ab0605a73bf',
     '448daad7236206909ec9eb7c32c7f372',
-    'e45755427dc4ecb81e890ad8d699df2f'
+    'cbdadb370426334bd22bd5fde1140eaf'
 ] # DO NOT CHANGE ORIGINAL HASH UNLESS DATABASE IS UPDATED
 from tqdm.rich import tqdm # progress bar
 import os
@@ -11,7 +11,6 @@ import sys
 # AMNS Compiler
 
 conv1 = '\nabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$%^&*()-=_+[{]}\\|;:\'",./<>?§\tÿþ÷'
-# conv1 =   '\n145141919810fcKyOuMoThErFuCkEr!QnMwTmDnMsLNbYSl23456789 `~!@#$%f(h&Vv*^&*()-=_+[{]}\\|;:\'",./<>?§\tÿþ÷'
 
 
 conv_loader = 1
