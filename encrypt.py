@@ -1,8 +1,8 @@
 orig_hash = [
-    'dd41ab0f74888ed22902452c552939b8',
-    '7c7a7a6f80b3da9fc67907af3df9d6e3',
-    'fbe2f0d1fc8a4f2eae4c759b699f0de4',
-    '7831ee5725078b1c27019ab527dc19ef'
+    '12bdfe19810f5ac3f04a71106f48b679',
+    'aeffd2b49bcb94fd5669b94d5475c20a',
+    'b063f11d615447a5e496b1f78f4cbde7',
+    '9e6a00d61d6bac79e88d2f792bf96c05'
 ] # DO NOT CHANGE ORIGINAL HASH UNLESS DATABASE IS UPDATED
 from tqdm.rich import tqdm # progress bar
 import os
@@ -15,6 +15,7 @@ conv1 = '\nabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$
 
 
 conv_loader = 2
+
 
 if conv_loader == 2: conv = ['\nabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ;:,.!? "']
 
