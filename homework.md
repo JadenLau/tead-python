@@ -17,4 +17,4 @@ The wolf ate all the sheep.
 # 5. Unknown
 The boy cried.
 
-Unknown question: *Don't tell lies.*
+Unknown question: *Don't tell li
